@@ -1,8 +1,10 @@
 # Template-in-C
 ---
 ## support
-This project(template) only can be use on function.
-And its only can be **two** or **three** different type.
+
+This project( template ) only can be use on function.
+
+And its only can be **two** or **three** different types.
 
 ## How to get
 It is only one header, so just include it.
