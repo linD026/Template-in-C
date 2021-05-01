@@ -19,6 +19,8 @@ template_list2(function_name, parameter, type_1, type_2,
   function_content
 )
 
+```
+```cpp
 template_list3(function_name, parameter, type_1, type_2, type3,
   function_content
 )
