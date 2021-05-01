@@ -54,13 +54,13 @@ typedef struct {
 } struct_test2;
 
 template_list3(test, int a, struct_test, struct_test1, struct_test2,
-    int a = arg->integer, b = 11;
+    int b = arg->integer, c = 11;
     for (int i = 0;i < a;i++) {
-        printf("a %d\n", i);
+        printf("%d\n", i);
     }
     T in = {.integer = 1};
     printf("%d\n", in.integer);
-    printf("%ld %s %d\n", sizeof(T), arg->string, a);
+    printf("%ld %s %d %d\n", sizeof(T), arg->string, a, b);
 )
 
 int main(void) {
