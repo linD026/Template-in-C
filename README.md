@@ -15,13 +15,12 @@ It is only one header, so just include it.
 ## How to use
 For declaring different type of the function
 ```cpp
-template_list2(function_name, parameter, type_1, type_2,
+template_list2(function_type, function_name, parameter, type_1, type_2,
   function_content
 )
-
 ```
 ```cpp
-template_list3(function_name, parameter, type_1, type_2, type3,
+template_list3(function_type, function_name, parameter, type_1, type_2, type3,
   function_content
 )
 ```
@@ -57,7 +56,7 @@ typedef struct {
     int dummy;
 } struct_test2;
 
-template_list3(test, void *d_arg[], struct_test, struct_test1, struct_test2,
+template_list3(int, test, void *d_arg[], struct_test, struct_test1, struct_test2,
     int a = *(int *)d_arg[1];
     int b = *(int *)d_arg[0], c = 11;
     printf("a %d, b %d\n", a, b);
@@ -67,6 +66,7 @@ template_list3(test, void *d_arg[], struct_test, struct_test1, struct_test2,
     T in = {.integer = 1};
     printf("%d\n", in.integer);
     printf("%ld %s %d %d\n", sizeof(T), arg->string, a, b);
+    return c;
 )
 
 int main(void) {
@@ -74,10 +74,10 @@ int main(void) {
     struct_test1 s1 = {.integer = 10, .string = "struct_test1"};
     void *list[2] = {&s.integer, &s1.integer};
     template_call(struct_test, test, s, list);
-    template_call(struct_test1, test, s1, list);
+    int get = template_call(struct_test1, test, s1, list);
+    printf("%d\n", get);
 }
 ```
-
 
 * Using the `T`, the name of type, when you want to declare the variable which is the type of `template_list` and `template_call` declarated.  
 * The template function already has the variable with `arg` name to receive the variable from `T_parameter`. 
