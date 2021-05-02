@@ -43,4 +43,5 @@ int main(void) {
     template_call(struct_test, test, s, list);
     int get = template_call(struct_test1, test, s1, list);
     printf("%d\n", get);
+    
 }
