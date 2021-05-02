@@ -1,3 +1,13 @@
+/**
+ * Template in C - The function templates in C project
+ * 
+ * It work like function templates of C++, but have some restrictions. Like: 
+ * - can only declare one return type
+ * - only one parameter, which named arg, with template type T in the function 
+ * - only provide two or three different types to declare. 
+ * 
+ * contributed by linD026
+ */
 #ifndef __TEMPLATE_H__
 #define __TEMPLATE_H__
 
